@@ -1,10 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { UserPlus } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <section className="relative min-h-screen pt-16 flex items-center justify-center">
+    <section className="relative h-screen min-h-[45rem] pt-16 flex items-center justify-center">
       {/* Background image */}
       <Image
         src="/image/unsplash-1.jpg"
@@ -15,13 +18,23 @@ export default function Home() {
       />
 
       {/* Overlay as gradient */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/25 to-black/90" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/25 to-black/75" />
 
       {/* Content */}
       <div className="relative z-20 max-w-6xl mx-auto flex flex-col items-center justify-center text-white w-full px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between w-full gap-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex flex-col md:flex-row items-center justify-between w-full gap-8"
+        >
           {/* Left Side */}
-          <div className="text-center md:text-left flex-1">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+            className="text-center md:text-left flex-1"
+          >
             <h1 className="text-4xl font-bold mb-4">
               Empowering Young Physicists
             </h1>
@@ -33,10 +46,15 @@ export default function Home() {
               <UserPlus className="mr-2 h-4 w-4" />
               Apply here
             </Button>
-          </div>
+          </motion.div>
 
           {/* Right Side (Image Logo) */}
-          <div className="flex items-center justify-center flex-1">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+            className="flex items-center justify-center flex-1"
+          >
             <div className="w-100 h-100 relative rounded-[2rem] overflow-hidden shadow-lg">
               <Image
                 src="/image/unsplash-2.jpg"
@@ -45,8 +63,8 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
