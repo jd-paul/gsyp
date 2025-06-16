@@ -57,7 +57,7 @@ export default function Home() {
           >
             <div className="w-100 h-100 relative rounded-[2rem] overflow-hidden shadow-lg">
               <Image
-                src="/image/unsplash-2.jpg"
+                src="/image/meeting.png"
                 alt="Sample Logo"
                 fill
                 className="object-cover"

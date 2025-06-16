@@ -1,7 +1,7 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ExternalLink } from "lucide-react"
-import { CheckCircle } from "lucide-react"
+// Import remains the same
+import Image from "next/image";
+import Link from "next/link";
+import { ExternalLink, CheckCircle } from "lucide-react";
 
 export default function Home() {
     return (
@@ -12,7 +12,7 @@ export default function Home() {
 
                 {/* 2 Columns */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full font-work-sans">
-                    {/* Left Column - GSYP Info */}
+                    {/* Left Column */}
                     <div className="flex flex-col w-full">
                         <p className="text-slate-900 text-xl mb-4 font-black">
                             About the Global Society of Young Physicists (GSYP)
@@ -27,10 +27,9 @@ export default function Home() {
                         </p>
                     </div>
 
-                    {/* Right Column - Custom Card */}
+                    {/* Right Column */}
                     <div className="flex flex-col w-full">
                         <div className="rounded-xl overflow-hidden shadow border border-zinc-200 bg-white">
-
                             <div className="group overflow-hidden">
                                 <Image
                                     src="/image/starry-messenger.png"
@@ -40,8 +39,6 @@ export default function Home() {
                                     className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                                 />
                             </div>
-
-                            {/* Card content */}
                             <div className="p-6">
                                 <h2 className="text-lg font-semibold mb-1">Read our magazine</h2>
                                 <p className="text-sm text-slate-600 mb-4">
@@ -85,38 +82,36 @@ export default function Home() {
                     <div className="flex flex-wrap justify-center gap-x-[10%] gap-y-12">
                         {[
                             {
-                                name: "Amira S.",
-                                role: "Student, UK",
-                                icon: "🧠"
+                                name: "Arya Lal Gonullu",
+                                role: "Mentor, UK"
                             },
                             {
                                 name: "Dr. Lin Q.",
-                                role: "Mentor, Berkeley",
-                                icon: "🎓"
+                                role: "Mentor, Berkeley"
                             },
                             {
                                 name: "Miguel R.",
-                                role: "Student, Spain",
-                                icon: "📡"
+                                role: "Student, Spain"
                             }
                         ].map((person, idx) => (
                             <div
                                 key={idx}
                                 className="flex flex-col items-center text-center space-y-2 max-w-[10rem]"
                             >
-                                <div className="w-20 h-20 rounded-full bg-purple-100 text-purple-900 flex items-center justify-center text-3xl shadow">
-                                    {person.icon}
-                                </div>
+                                <Image
+                                    src="/image/person-a.jpeg"
+                                    alt={person.name}
+                                    width={80}
+                                    height={80}
+                                    className="rounded-full object-cover shadow w-20 h-20"
+                                />
                                 <div className="font-semibold text-zinc-900">{person.name}</div>
                                 <div className="text-sm text-zinc-500 leading-snug">{person.role}</div>
                             </div>
                         ))}
                     </div>
                 </div>
-
-
-
             </div>
         </section>
-    )
+    );
 }
