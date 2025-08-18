@@ -47,7 +47,7 @@ export default function ContactForm() {
       <CardHeader>
         <CardTitle>Contact Our Enterprise Team</CardTitle>
         <CardDescription>
-          Fill out the form below to discuss your organization's needs and receive a custom quote.
+          Fill out the form below to discuss your organization&apos;s needs and receive a custom quote.
         </CardDescription>
       </CardHeader>
       <CardContent>

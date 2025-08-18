@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink, CheckCircle } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 
 export default function Home() {
@@ -173,51 +173,6 @@ export default function Home() {
                             </article>
                         </div>
                     </div>
-
-                    {/* Hook Stats */}
-                    {/* <div className="mt-16 w-full rounded-xl px-6 py-0">
-                        <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base font-medium">
-                            {[
-                                "10+ students",
-                                "Students published papers",
-                                "Magazine contributions open",
-                                "International reach",
-                                "No prior experience needed"
-                            ].map((item, index) => (
-                                <div key={index} className="flex flex-wrap justify-center gap-6 text-sm md:text-base text-muted-foreground font-medium">
-                                    <CheckCircle className="w-4 h-4 text-purple-800" />
-                                    {item}
-                                </div>
-                            ))}
-                        </div>
-                    </div> */}
-
-                    {/* Sample Profiles */}
-                    {/* <div className="w-full mt-[3rem]">
-                        <div className="flex flex-wrap justify-center gap-x-[10%] gap-y-12">
-                            {[
-                                {
-                                    name: "Arya Lal Gonullu",
-                                    role: "Mentor, UK"
-                                },
-                            ].map((person, idx) => (
-                                <div
-                                    key={idx}
-                                    className="flex flex-col items-center text-center space-y-2 max-w-[10rem]"
-                                >
-                                    <Image
-                                        src="/image/person-a.jpeg"
-                                        alt={person.name}
-                                        width={80}
-                                        height={80}
-                                        className="rounded-full object-cover shadow w-20 h-20"
-                                    />
-                                    <div className="font-semibold text-zinc-900">{person.name}</div>
-                                    <div className="text-sm text-zinc-500 leading-snug">{person.role}</div>
-                                </div>
-                            ))}
-                        </div>
-                    </div> */}
                 </div>
             </section>
         </>

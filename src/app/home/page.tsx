@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button"
 import { BookOpenCheck, Squirrel, User } from "lucide-react"
-import FramerSpotlight from "@/components/framer-spotlight"
 import CssGridBackground from "@/components/css-grid-background"
 import StructuredData from "@/components/structured-data"
 import Link from "next/link"

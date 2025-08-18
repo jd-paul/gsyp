@@ -215,7 +215,7 @@ export default function PrivacyPolicyTemplate({
         </>
       )}
 
-      <h2>Children's Privacy</h2>
+      <h2>Children&apos;s Privacy</h2>
       <p>
         Our services are not intended for individuals under the age of 16. We do not knowingly collect personal
         information from children under 16. If we learn we have collected or received personal information from a child
@@ -237,7 +237,7 @@ export default function PrivacyPolicyTemplate({
       <h2>Changes to This Privacy Policy</h2>
       <p>
         We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy
-        Policy on this page and updating the "Last updated" date at the top of this Privacy Policy.
+        Policy on this page and updating the &quot;Last updated&quot; date at the top of this Privacy Policy.
       </p>
       <p>
         You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are

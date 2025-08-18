@@ -1,10 +1,5 @@
 import type { Metadata } from "next"
 import {
-  Inter,
-  Poppins,
-  Roboto,
-  Open_Sans,
-  Lato,
   Nunito,
   Lora
 } from "next/font/google"
@@ -16,35 +11,6 @@ const lora = Lora({
 })
 
 import "./globals.css"
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-})
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  variable: "--font-poppins",
-  weight: ["400", "600", "700"],
-})
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  variable: "--font-roboto",
-  weight: ["400", "700"],
-})
-
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  variable: "--font-open-sans",
-  weight: ["400", "700"],
-})
-
-const lato = Lato({
-  subsets: ["latin"],
-  variable: "--font-lato",
-  weight: ["400", "700"],
-})
 
 const nunito = Nunito({
   subsets: ["latin"],
