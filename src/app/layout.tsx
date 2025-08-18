@@ -1,28 +1,72 @@
-import type { Metadata } from "next";
-import { AR_One_Sans } from "next/font/google"
-import "./globals.css";
+import type { Metadata } from "next"
+import {
+  Inter,
+  Poppins,
+  Roboto,
+  Open_Sans,
+  Lato,
+  Nunito,
+  Lora
+} from "next/font/google"
 
-const arOneSans = AR_One_Sans({
+const lora = Lora({
   subsets: ["latin"],
-  variable: "--font-ar-one-sans",
-  weight: ["400", "700"], // adjust based on what weights you want
-});
+  variable: "--font-lora",
+  weight: ["400", "700"], // adjust as needed
+})
+
+import "./globals.css"
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+})
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ["400", "600", "700"],
+})
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  variable: "--font-roboto",
+  weight: ["400", "700"],
+})
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans",
+  weight: ["400", "700"],
+})
+
+const lato = Lato({
+  subsets: ["latin"],
+  variable: "--font-lato",
+  weight: ["400", "700"],
+})
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito",
+  weight: ["400", "700"],
+})
 
 export const metadata: Metadata = {
   title: "Global Society of Young Physicists",
   description: "A community for high school students interested in physics research",
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
-      <body className={`${arOneSans.variable} antialiased`}>
+      <body className={`${nunito.variable} ${lora.variable} antialiased`}>
         {children}
       </body>
     </html>
-  );
+  )
 }

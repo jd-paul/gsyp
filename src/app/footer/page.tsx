@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const Footer = () => {
     return (
-        <footer className="bg-purple-800 text-white/90 px-4 pt-12 pb-16">
+        <section className="bg-[#005c86] text-white/90 px-4 pt-12 pb-16" id="contact">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-10">
                 {/* Left: Address Block with map placeholder */}
                 <div className="md:w-1/2 space-y-3">
@@ -45,7 +45,7 @@ const Footer = () => {
 
 
 
-        </footer>
+        </section>
     )
 }
 
