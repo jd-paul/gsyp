@@ -1,7 +1,8 @@
+"use client"; // if you're in Next.js app router
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink } from "lucide-react";
-
+import { ExternalLink, Squirrel, User } from "lucide-react"
+import { Carousel } from "../../components/carousel"
 
 export default function Home() {
     const ctaLinks = [
@@ -38,7 +39,7 @@ export default function Home() {
 
     return (
         <>
-            <section className="relative bg-gray-100" id="community">
+            <section className="relative bg-gray-100">
                 <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
 
                     <div className="flex flex-col items-center justify-center mx-auto p-12 max-w-xl">
@@ -94,8 +95,10 @@ export default function Home() {
                 <div className="relative z-20 max-w-6xl mx-auto flex flex-col items-center justify-center w-full py-4 px-4">
                     {/* Header */}
                     <div className="flex flex-col items-center justify-center text-center mb-12">
-                        <div className="inline-block rounded-xl bg-[#F58F29] px-3 font-bold py-1 text-sm text-white mb-4">
+                        <div className="inline-flex items-center gap-1.5 rounded-xl bg-[#F58F29] px-3 py-1 font-bold text-sm text-white mb-4">
+                            <User className="w-3.5 h-3.5 stroke-[1.5px]" />
                             Your role starts here
+                            <Squirrel className="w-3.5 h-3.5 stroke-[1.5px]" />
                         </div>
 
                         <h2 id="about-heading" className="text-4xl font-bold tracking-tight sm:text-5xl mb-4 font-serif text-gray-800">
@@ -132,46 +135,54 @@ export default function Home() {
                             </div>
                         </div>
 
-                        {/* Right column – article card */}
+                        {/* Right column – carousel of article cards */}
                         <div className="flex flex-col w-full">
-                            <article className="bg-white rounded-[20px] shadow-lg overflow-hidden transition hover:shadow-xl">
-                                {/* banner image */}
-                                <div className="relative h-44 w-full overflow-hidden group">
-                                    <Image
-                                        src="/image/starry-messenger.png"
-                                        alt="Starry Messenger cover"
-                                        fill
-                                        className="object-cover"
-                                        priority
-                                    />
-                                </div>
 
-                                {/* card body */}
-                                <div className="p-6 space-y-4">
-                                    <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">
-                                        Physics&nbsp;• Publication
-                                    </span>
+                            <Carousel
+                                items={[
+                                    {
+                                        image: "/image/issue-4.png",
+                                        title: "Read our August 2025 Issue!",
+                                        description: "Presents the 2025 students' research with deeper analysis and fresh perspectives on advanced physics topics.",
+                                        action: () =>
+                                            window.open(
+                                                "https://drive.google.com/file/d/1kTuvAXBbbspFzkv75FRiYtDcsypdEVlD/view?usp=sharing",
+                                                "_blank"
+                                            ),
+                                    },
+                                    {
+                                        image: "/image/issue-3.png",
+                                        title: "Read our April 2025 Issue!",
+                                        description: "Includes global student contributions on quantum ideas, astrophysics, and cross-field themes.",
+                                        action: () =>
+                                            window.open("https://drive.google.com/file/d/1OpUB-QzRZHJPlvsuZC9vMSUTxzbjVArm/view?usp=sharing", "_blank"),
+                                    },
+                                    {
+                                        image: "/image/issue-2.png",
+                                        title: "Read our December 2024 Issue!",
+                                        description: "Covers black holes, space missions, and creative approaches to experiments.",
+                                        action: () =>
+                                            window.open("https://drive.google.com/file/d/1m4EtybazHj8aYMk2huTrJ0oq7XikgFd6/view?usp=sharing", "_blank"),
+                                    },
+                                    {
+                                        image: "/image/issue-1.png",
+                                        title: "Read our August 2024 Issue!",
+                                        description: "The first issue, featuring student reports on topics like planets, particles, and space science.",
+                                        action: () =>
+                                            window.open("https://drive.google.com/file/d/1TpDt1oiccsfUur13e3AvkjqXdaaInAR2/view?usp=sharing", "_blank"),
+                                    },
+                                    {
+                                        image: "/image/class-list_2024.png",
+                                        title: "Mentors for 2024",
+                                        description: "Here is a list of our mentors for 2024.",
+                                        action: () =>
+                                            window.open("https://drive.google.com/file/d/1PxGx8JF3hc_C2LSFHDRMXPlc2fAubWtw/view?usp=sharing", "_blank"),
+                                    },
+                                ]}
+                            />
 
-                                    <h3 className="text-xl font-semibold text-sky-900">
-                                        Read one&nbsp;of our Published Papers
-                                    </h3>
-
-                                    <p className="text-sm text-gray-600 leading-relaxed">
-                                        <em>The&nbsp;Starry Messenger</em> is available online via Blurb.
-                                    </p>
-
-                                    <Link
-                                        href="https://drive.google.com/file/d/1RAnHBzVVzkJ2hvzKhpv6LAMXMWvewnWc/view"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1 text-[#F58F29] font-medium hover:underline"
-                                    >
-                                        <ExternalLink className="h-4 w-4" />
-                                        Read&nbsp;Here
-                                    </Link>
-                                </div>
-                            </article>
                         </div>
+
                     </div>
                 </div>
             </section>

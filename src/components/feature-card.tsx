@@ -38,10 +38,6 @@ export default function FeatureCard({
       style={style}
     >
       {/* Accent bar */}
-      <div
-        className="h-1 w-full"
-        style={{ background: `linear-gradient(90deg, var(--accent), transparent)` }}
-      />
 
       {/* banner (optional) */}
       {imageSrc && (
@@ -58,16 +54,6 @@ export default function FeatureCard({
 
       {/* body */}
       <div className="p-6 space-y-2">
-        {icon && (
-          <div
-            className="inline-flex items-center justify-center rounded-md p-2 mb-2"
-            style={{ background: `color-mix(in srgb, var(--accent) 20%, transparent)` }}
-          >
-            {/* let icon inherit accent color */}
-            <div style={{ color: `var(--accent)` }}>{icon}</div>
-          </div>
-        )}
-
         <h3 className="text-xl font-semibold text-neutral-900">{title}</h3>
         <p className="text-sm text-neutral-700 leading-relaxed">{description}</p>
       </div>

@@ -23,7 +23,7 @@ export default function Home() {
               </h1>
 
               <p className="text-xl mb-9 drop-shadow-lg">
-                Democratising quantum education, one mind at a time.
+                Democratising physics education, one mind at a time.
               </p>
 
               <div className="flex flex-wrap justify-center gap-3">
@@ -31,16 +31,27 @@ export default function Home() {
                   variant="outline"
                   className="h-8 px-3 rounded-full bg-white hover:bg-white text-gray-700 shadow-sm border border-gray-200 text-[13px] font-medium whitespace-nowrap inline-flex items-center gap-1.5"
                 >
-                  <User className="w-3.5 h-3.5 stroke-[1.5px]" />
-                  Become a Student
+                  <a
+                    href="#community"
+                    className="inline-flex items-center gap-1.5"
+                  >
+                    <User className="w-3.5 h-3.5 stroke-[1.5px]" />
+                    Become a Student
+                  </a>
+
                 </ReflectiveButton>
 
                 <ReflectiveButton
                   variant="outline"
                   className="h-8 px-3 rounded-full bg-white hover:bg-white text-gray-700 shadow-sm border border-gray-200 text-[13px] font-medium whitespace-nowrap inline-flex items-center gap-1.5"
                 >
-                  <Squirrel className="w-3.5 h-3.5 stroke-[1.5px]" />
-                  Become a Teacher
+                  <a
+                    href="#community"
+                    className="inline-flex items-center gap-1.5"
+                  >
+                    <Squirrel className="w-3.5 h-3.5 stroke-[1.5px]" />
+                    Become a Research Mentor
+                  </a>
                 </ReflectiveButton>
 
                 <Link href="#program">

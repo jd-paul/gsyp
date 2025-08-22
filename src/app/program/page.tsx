@@ -28,7 +28,8 @@ const Program = () => {
           {
             imageSrc: "/image/meeting-1.png",
             title: "Deep dives into equations",
-            description: "We deeply learn about our equat.",
+            // What are some good equations that would likely be touched on for this?
+            description: "We dive into equations that help you transition to university maths, such as Euler's identity, Bayes' theorem, and fundamental calculus limits.",
           },
           {
             imageSrc: "/image/meeting-2.png",
@@ -43,7 +44,7 @@ const Program = () => {
           {
             imageSrc: "/image/meeting-4.png",
             title: "Recorded lectures",
-            description: "We record our lectures and share our resources for your use.",
+            description: "We record and share our lectures for your use.",
           },
         ].map((feature, i) => (
           <FeatureCard
