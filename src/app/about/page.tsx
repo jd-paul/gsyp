@@ -8,11 +8,11 @@ export default function Home() {
     const ctaLinks = [
         {
             href: "https://forms.gle/vaPwX6zpJNWMZFyK9",
-            label: "RMP Student Application",
+            label: "RMP 2025 Early Student Application",
         },
         {
             href: "https://docs.google.com/forms/d/e/1FAIpQLSeQ9giQL7a9kHb_y9LRsGNqLglrrvtNAqCnfxVTr4LghIxZPg/viewform",
-            label: "Deputy Editor Application",
+            label: "Deputy Editor Form",
         },
         {
             href: "https://docs.google.com/forms/d/e/1FAIpQLSeFXmPTU_1pp9Bb3H5SK2KpsoTBikeCRr3zfY8wvt6Ja5Qu0w/viewform",
@@ -20,21 +20,22 @@ export default function Home() {
         },
         {
             href: "https://docs.google.com/forms/d/e/1FAIpQLSc1GgTcAXGex6_CkHooyo1uxiZxF-uuUczh2c24Ed7Z82xtLw/viewform",
-            label: "Outreach Manager Application",
+            label: "Outreach Manager Form",
         },
         {
-            href: "https://forms.gle/n52J2cNdcNGAefvd7",
-            label: "Research Mentor Application",
+            href: "https://docs.google.com/forms/d/e/1FAIpQLSffZqSmqJIBKOTXKG_hdv5LIP3ef9nqhOx6nJ5r9YySv79QFA/viewform?usp=header",
+            label: "New Mentor Form",
         },
         {
-            href: "https://docs.google.com/forms/d/e/1FAIpQLSf7PxD04bHF-wF71c5BswYz0elftDabFfKqjpKwxgUOTUhVUQ/viewform",
+            href: "https://docs.google.com/forms/d/e/1FAIpQLScxgmUZ-wRHCJcVzJF9wuw_5UAgMjPZftJd-SteyRtmYRvQ-Q/viewform?usp=header",
             label: "Returning Mentor Form",
         },
         {
             href: "https://docs.google.com/forms/d/e/1FAIpQLSeB0I5vwjzYL9_A1kZARpwXViuMWYBBi86Vp38WnmRINq9-gQ/viewform",
-            label: "GSYP Membership Form",
+            label: "Become a GSYP Member!",
         },
     ];
+
 
 
     return (
