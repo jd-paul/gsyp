@@ -147,7 +147,7 @@ export default function Home() {
                                     {
                                         image: "/image/issue-4.png",
                                         title: "Read our August 2025 Issue!",
-                                        description: "Presents the 2025 students' research with deeper analysis and fresh perspectives on advanced physics topics.",
+                                        description: "Presents the 2025 research mentorship programme (RMP) papers on advanced physics topics.",
                                         action: () =>
                                             window.open(
                                                 "https://drive.google.com/file/d/1kTuvAXBbbspFzkv75FRiYtDcsypdEVlD/view?usp=sharing",
@@ -177,8 +177,8 @@ export default function Home() {
                                     },
                                     {
                                         image: "/image/class-list_2024.png",
-                                        title: "Mentors for 2024",
-                                        description: "Here is a list of our mentors for 2024.",
+                                        title: "Class list 2024",
+                                        description: "Here is a class list for 2024.",
                                         action: () =>
                                             window.open("https://drive.google.com/file/d/1PxGx8JF3hc_C2LSFHDRMXPlc2fAubWtw/view?usp=sharing", "_blank"),
                                     },

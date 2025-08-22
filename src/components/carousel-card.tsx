@@ -12,7 +12,7 @@ export const AppCard: React.FC<AppCardProps> = ({ image, title, description, onC
     return (
         <motion.div
             whileTap={{ scale: 0.95 }}
-            className="rounded-xl p-6 cursor-pointer w-64 max-h-80 flex flex-col justify-between transition-colors duration-300 overflow-hidden 
+            className="rounded-2xl p-6 cursor-pointer w-64 max-h-80 flex flex-col justify-between transition-colors duration-300 overflow-hidden 
                        bg-gray-100/10 backdrop-blur-md border border-gray-100/10 shadow-lg overflow-hidden"
             onClick={onClick}
         >
