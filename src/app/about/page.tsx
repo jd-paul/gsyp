@@ -119,7 +119,11 @@ export default function Home() {
                                 university mentors for a remote research experience in physics.
                             </p>
 
-                            <div className="flex flex-wrap gap-3 mt-3">
+                            <p className="md:text-lg text-gray-800 leading-relaxed font-semibold mt-5">
+                                Work with us! Click the links below to apply.
+                            </p>
+
+                            <div className="flex flex-wrap gap-3 mt-2">
                                 {ctaLinks.map(({ href, label }) => (
                                     <Link
                                         key={href}

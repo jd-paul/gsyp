@@ -12,7 +12,8 @@ export const AppCard: React.FC<AppCardProps> = ({ image, title, description, onC
     return (
         <motion.div
             whileTap={{ scale: 0.95 }}
-            className="rounded-xl p-6 cursor-pointer w-64 max-h-80 flex flex-col justify-between transition-colors duration-300 overflow-hidden"
+            className="rounded-xl p-6 cursor-pointer w-64 max-h-80 flex flex-col justify-between transition-colors duration-300 overflow-hidden 
+                       bg-gray-100/10 backdrop-blur-md border border-gray-100/10 shadow-lg overflow-hidden"
             onClick={onClick}
         >
             <div className="flex flex-col items-center text-center">
@@ -20,7 +21,7 @@ export const AppCard: React.FC<AppCardProps> = ({ image, title, description, onC
                     <img src={image} alt={title} className="object-contain" />
                 </div>
                 <h2 className="text-xl font-semibold text-gray-200 mb-2">{title}</h2>
-                <p className="text-gray-400 text-sm font-light line-clamp-3">
+                <p className="text-gray-300 text-sm font-light line-clamp-3">
                     {description}
                 </p>
             </div>

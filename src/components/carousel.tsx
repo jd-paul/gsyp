@@ -59,10 +59,10 @@ export const Carousel: React.FC<CarouselProps> = ({ items }) => {
     return (
         <>
             <style>{noScrollbarCSS}</style>
-            <div className="relative w-full max-w-5xl rounded-3xl bg-gray-800 shadow-md">
+            <div className="relative w-full max-w-5xl rounded-3xl bg-gray-800 shadow-md overflow-hidden pl-6">
                 <motion.div
                     ref={carouselRef}
-                    className="flex space-x-6 overflow-x-auto scrollbar-hide py-4 no-scrollbar"
+                    className="flex l-6 space-x-6 overflow-x-auto scrollbar-hide py-5 no-scrollbar"
                     style={{ scrollSnapType: "x mandatory", msOverflowStyle: "none", scrollbarWidth: "none" }}
                 >
                     {items.map((item, index) => (
