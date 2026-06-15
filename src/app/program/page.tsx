@@ -3,9 +3,9 @@ import FeatureCard from "@/components/feature-card"
 
 const Program = () => {
   return (
-    <section className="relative py-24 lg:py-32 bg-[#f1f1ef] text-[#37352f] overflow-hidden" id="program">
+    <section className="relative py-20 lg:py-24 bg-[#f1f1ef] text-[#37352f] overflow-hidden" id="program">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-2xl mb-12">
           <span className="inline-flex items-center gap-3 text-sm font-mono uppercase tracking-widest text-[#9b9a97] mb-4">
             <span className="w-8 h-px bg-[#9b9a97]/30" />
             Check our program

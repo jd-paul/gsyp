@@ -22,6 +22,21 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const styleId = "gsyp-marquee-keyframes";
+    if (!document.getElementById(styleId)) {
+      const style = document.createElement("style");
+      style.id = styleId;
+      style.innerHTML = `
+        @keyframes gsyp-marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }, []);
+
   return (
     <>
       <StructuredData />
@@ -228,29 +243,36 @@ export default function Home() {
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
-            <div className="flex gap-16 marquee whitespace-nowrap">
-              {[...Array(2)].map((_, i) => (
-                <div key={i} className="flex gap-16">
-                  {[
-                    { value: "200+", label: "Students mentored" },
-                    { value: "4", label: "Research issues" },
-                    { value: "30+", label: "Mentors" },
-                    { value: "15+", label: "Countries" },
-                  ].map((stat) => (
-                    <div
-                      key={`${stat.label}-${i}`}
-                      className="flex items-baseline gap-4"
-                    >
-                      <span className="text-3xl lg:text-4xl font-serif text-[#37352f]">
-                        {stat.value}
-                      </span>
-                      <span className="text-sm text-[#9b9a97] font-mono uppercase tracking-wider">
-                        {stat.label}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              ))}
+            <div className="w-full overflow-hidden whitespace-nowrap">
+              <div
+                className="inline-flex whitespace-nowrap will-change-transform"
+                style={{
+                  animation: "gsyp-marquee 25s linear infinite",
+                }}
+              >
+                {[...Array(2)].map((_, i) => (
+                  <div key={i} className="flex gap-16 pr-16 shrink-0">
+                    {[
+                      { value: "200+", label: "Students mentored" },
+                      { value: "4", label: "Research issues" },
+                      { value: "15+", label: "Mentors" },
+                      { value: "15+", label: "Countries" },
+                    ].map((stat) => (
+                      <div
+                        key={`${stat.label}-${i}`}
+                        className="flex items-baseline gap-4"
+                      >
+                        <span className="text-3xl lg:text-4xl font-serif text-[#37352f]">
+                          {stat.value}
+                        </span>
+                        <span className="text-sm text-[#9b9a97] font-mono uppercase tracking-wider">
+                          {stat.label}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>

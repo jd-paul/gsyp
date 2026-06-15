@@ -99,9 +99,9 @@ export default function About() {
         </div>
       </section>
 
-      <section className="relative py-24 lg:py-32 bg-[#f1f1ef]" id="community">
+      <section className="relative py-20 lg:py-24 bg-[#f1f1ef]" id="community">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="max-w-2xl mb-16">
+          <div className="max-w-2xl mb-12">
             <span className="inline-flex items-center gap-3 text-sm font-mono uppercase tracking-widest text-[#0b6e99] mb-4">
               <span className="w-8 h-px bg-[#0b6e99]/30" />
               Your role starts here
@@ -192,14 +192,22 @@ export default function About() {
                     href: "https://drive.google.com/file/d/1m4EtybazHj8aYMk2huTrJ0oq7XikgFd6/view?usp=sharing",
                   },
                   {
+                    image: "/image/issue-1.png",
                     title: "Read our August 2024 Issue!",
                     description:
                       "The first issue, featuring student reports on topics like planets, particles, and space science.",
                     href: "https://drive.google.com/file/d/1TpDt1oiccsfUur13e3AvkjqXdaaInAR2/view?usp=sharing",
                   },
+                ]}
+                links={[
+                  {
+                    title: "Class list 2025",
+                    description: "",
+                    href: "https://drive.google.com/file/d/19as2YOwavprLoCHJIoQz7zyJxmJPnSvy/view?usp=sharing",
+                  },
                   {
                     title: "Class list 2024",
-                    description: "Here is a class list for 2024.",
+                    description: "",
                     href: "https://drive.google.com/file/d/1PxGx8JF3hc_C2LSFHDRMXPlc2fAubWtw/view?usp=sharing",
                   },
                 ]}

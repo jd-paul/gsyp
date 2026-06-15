@@ -33,7 +33,6 @@ export default function Navbar() {
             <span className="hidden lg:inline text-sm text-[#9b9a97]">
               Global Society of Young Physicists
             </span>
-            <span className="font-mono text-[10px] text-[#d9730d]">EST</span>
           </Link>
 
           {/* Desktop Navigation */}
