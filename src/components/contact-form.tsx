@@ -32,7 +32,7 @@ export default function ContactForm() {
         <CardContent className="pt-6 flex flex-col items-center justify-center min-h-[400px] text-center">
           <CheckCircle2 className="h-16 w-16 text-primary mb-4" />
           <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
-          <p className="text-muted-foreground mb-6">
+          <p className="text-[#9b9a97] mb-6">
             Your inquiry has been received. Our enterprise team will contact you shortly to discuss your specific
             requirements.
           </p>
@@ -97,7 +97,7 @@ export default function ContactForm() {
           <Button type="submit" className="w-full" disabled={isSubmitting}>
             {isSubmitting ? "Submitting..." : "Request Information"}
           </Button>
-          <p className="text-xs text-muted-foreground text-center">
+          <p className="text-xs text-[#9b9a97] text-center">
             By submitting this form, you agree to our privacy policy and terms of service.
           </p>
         </form>

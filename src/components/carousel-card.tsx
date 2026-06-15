@@ -2,32 +2,38 @@ import type React from "react"
 import { motion } from "framer-motion"
 
 interface AppCardProps {
-    image: string
-    title: string
-    description: string
-    onClick: () => void
+  image: string
+  title: string
+  description: string
+  onClick: () => void
 }
 
 export const AppCard: React.FC<AppCardProps> = ({ image, title, description, onClick }) => {
-    return (
-        <motion.div
-            whileTap={{ scale: 0.95 }}
-            className="rounded-2xl p-6 cursor-pointer w-64 max-h-80 flex flex-col justify-between transition-colors duration-300 overflow-hidden 
-                       bg-gray-100/10 backdrop-blur-md border border-gray-100/10 shadow-lg overflow-hidden"
-            onClick={onClick}
-        >
-            <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
-                    <img src={image} alt={title} className="object-contain" />
-                </div>
-                <h2 className="text-xl font-semibold text-gray-200 mb-2">{title}</h2>
-                <p className="text-gray-300 text-sm font-light line-clamp-3">
-                    {description}
-                </p>
-            </div>
-            <div className="mt-4 text-[#F58F29] text-sm font-medium text-center">
-                Click to access resource...
-            </div>
-        </motion.div>
-    )
+  return (
+    <motion.div
+      whileTap={{ scale: 0.98 }}
+      onClick={onClick}
+      className="group cursor-pointer w-72 flex flex-col rounded-xl border border-[#f1f1ef] bg-white shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+    >
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#f1f1ef]">
+        <img
+          src={image}
+          alt={title}
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+
+      <div className="flex flex-col flex-1 p-5">
+        <h3 className="text-lg font-semibold text-[#37352f] mb-2 leading-snug">
+          {title}
+        </h3>
+        <p className="text-sm text-[#9b9a97] leading-relaxed line-clamp-3 mb-4 flex-1">
+          {description}
+        </p>
+        <span className="text-xs font-mono uppercase tracking-wider text-[#d9730d]">
+          Open resource
+        </span>
+      </div>
+    </motion.div>
+  )
 }

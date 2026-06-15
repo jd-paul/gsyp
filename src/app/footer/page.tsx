@@ -1,52 +1,76 @@
 import React from "react"
-import Link from "next/link"
 
 const Footer = () => {
-    return (
-        <section className="bg-[#005c86] text-white/90 px-4 pt-12 pb-16" id="contact">
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-10">
-                {/* Left: Address Block with map placeholder */}
-                <div className="md:w-1/2 space-y-3">
-                    <h3 className="text-xl font-semibold uppercase tracking-wide">Head Office</h3>
-                    <p className="text-sm">
-                        GSYP<br />
-                        64 Nile Street<br />
-                        London, England, N1 7SR
-                    </p>
-                </div>
+  return (
+    <footer className="relative border-t border-[#f1f1ef] bg-white" id="contact">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+        <div className="py-16 lg:py-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="lg:col-span-2 space-y-4">
+            <a href="#home" className="inline-flex items-baseline gap-2 group">
+              <span className="text-2xl font-serif text-[#37352f]">GSYP</span>
+              <span className="text-xs text-[#9b9a97] font-mono">Global Society of Young Physicists</span>
+            </a>
 
-                {/* Right: Info blocks */}
-                <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
-                    <div className="text-white/80">
-                        <h4 className="font-semibold mb-2 text-white/90">Contact</h4>
-                        <p>contact@gsyp.org</p>
-                        <p>info@gsyp.org</p>
-                    </div>
+            <p className="text-sm text-[#9b9a97] leading-relaxed max-w-xs">
+              A student-led organisation helping high-schoolers around the world dive into university-level physics research.
+            </p>
 
-                    <div className="text-white/80">
-                        <h4 className="font-semibold mb-2 text-white/90">Follow Us</h4>
-                        <ul className="space-y-1">
-                            <li><Link href="https://linkedin.com/company/gsyphysics" className="hover:underline">LinkedIn</Link></li>
-                            <li><Link href="https://instagram.com" className="hover:underline">Instagram</Link></li>
-                            <li><Link href="https://x.com" className="hover:underline">Twitter/X</Link></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <address className="not-italic text-sm text-[#9b9a97] leading-relaxed">
+              GSYP<br />
+              64 Nile Street<br />
+              London, England, N1 7SR
+            </address>
+          </div>
 
-            {/* Bottom bar */}
-            <div className="max-w-6xl mx-auto mt-10 border-t border-white/20 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-white/70 gap-4">
-                <p>© {new Date().getFullYear()} Global Society of Young Physicists</p>
-                <div className="flex gap-4">
-                    <Link href="/privacy" className="hover:underline">Privacy Policy</Link>
-                    <Link href="/imprint" className="hover:underline">Imprint</Link>
-                </div>
-            </div>
+          <div>
+            <h3 className="text-sm font-mono uppercase tracking-widest text-[#37352f] mb-6">Contact</h3>
+            <ul className="space-y-3 text-sm text-[#9b9a97]">
+              <li>
+                <a href="mailto:contact@gsyp.org" className="hover:text-[#d9730d] transition-colors">
+                  contact@gsyp.org
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@gsyp.org" className="hover:text-[#d9730d] transition-colors">
+                  info@gsyp.org
+                </a>
+              </li>
+            </ul>
+          </div>
 
+          <div>
+            <h3 className="text-sm font-mono uppercase tracking-widest text-[#37352f] mb-6">Follow Us</h3>
+            <ul className="space-y-3 text-sm text-[#9b9a97]">
+              <li>
+                <a
+                  href="https://linkedin.com/company/gsyphysics"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#d9730d] transition-colors"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/gsyphysics/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#d9730d] transition-colors"
+                >
+                  Instagram
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-
-        </section>
-    )
+        <div className="py-8 border-t border-[#f1f1ef] flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#9b9a97]">
+          <p>© {new Date().getFullYear()} Global Society of Young Physicists</p>
+        </div>
+      </div>
+    </footer>
+  )
 }
 
 export default Footer

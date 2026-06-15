@@ -83,7 +83,7 @@ export default function UseCases() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-muted/30 dark:from-background dark:to-muted/10">
+    <section className="py-20 bg-gradient-to-b from-white to-[#f1f1ef]/30 dark:from-white dark:to-[#f1f1ef]/10">
       <div className="container px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
@@ -93,11 +93,11 @@ export default function UseCases() {
           transition={{ duration: 0.6 }}
         >
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground mb-2">
+            <div className="inline-block rounded-lg bg-[#0b6e99] px-3 py-1 text-sm text-white mb-2">
               Use Cases
             </div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Transforming Industries</h2>
-            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#37352f]">Transforming Industries</h2>
+            <p className="mx-auto max-w-[700px] text-[#9b9a97] md:text-xl">
               Our AI platform is designed to meet the unique challenges of various sectors.
             </p>
           </div>
@@ -112,13 +112,13 @@ export default function UseCases() {
         >
           {useCases.map((useCase, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <Card className="h-full bg-background/60 backdrop-blur-sm border transition-all duration-300 hover:shadow-lg dark:bg-background/80">
+              <Card className="h-full bg-white/60 backdrop-blur-sm border-[#f1f1ef] transition-all duration-300 hover:shadow-lg dark:bg-white/80">
                 <CardHeader className="pb-2">
                   <FrostedGlassIcon icon={useCase.icon} color={useCase.accentColor} className="mb-4" />
-                  <CardTitle>{useCase.title}</CardTitle>
+                  <CardTitle className="text-[#37352f]">{useCase.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base">{useCase.description}</CardDescription>
+                  <CardDescription className="text-base text-[#9b9a97]">{useCase.description}</CardDescription>
                 </CardContent>
               </Card>
             </motion.div>

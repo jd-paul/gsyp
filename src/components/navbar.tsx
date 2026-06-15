@@ -1,94 +1,114 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Zap } from "lucide-react"
-import { SheetTitle } from "@/components/ui/sheet"
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+import { Menu } from "lucide-react"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
+const navLinks = [
+  { name: "Home", href: "#home" },
+  { name: "Community", href: "#community" },
+  { name: "Program", href: "#program" },
+  { name: "Contact", href: "#contact" },
+]
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "Community", href: "#community" },
-    { label: "Program", href: "#program" },
-    { label: "Contact", href: "#contact" },
-  ]
-
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/100 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="flex flex-wrap items-center justify-between gap-4 px-4 py-3 h-16">
-        {/* Left: Logo + Title */}
-        <div className="flex items-center gap-6 min-w-0">
-          <Link href="/" className="flex items-center gap-2" aria-label="GSYP Homepage">
-            {/* <Image src="/logo.png" alt="GSYP Logo" width={32} height={32} priority /> */}
-            <span className="text-base font-semibold truncate hidden lg:inline">
+    <header className="w-full border-b border-[#f1f1ef] bg-white">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link
+            href="/"
+            className="flex items-baseline gap-2 group"
+            aria-label="GSYP Homepage"
+          >
+            <span className="text-xl font-serif text-[#37352f]">GSYP</span>
+            <span className="hidden lg:inline text-sm text-[#9b9a97]">
               Global Society of Young Physicists
             </span>
-            <span className="text-base font-semibold truncate lg:hidden">
-              GSYP
-            </span>
+            <span className="font-mono text-[10px] text-[#d9730d]">EST</span>
           </Link>
 
-          {/* Nav next to logo */}
-          <nav className="hidden lg:flex items-center gap-6" aria-label="Main Navigation">
-            {navItems.map((item, index) => (
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-8" aria-label="Main Navigation">
+            {navLinks.map((link) => (
               <Link
-                key={index}
-                href={item.href}
-                className="text-sm font-medium transition-colors hover:text-primary"
+                key={link.name}
+                href={link.href}
+                className="text-sm text-[#9b9a97] hover:text-[#37352f] transition-colors duration-300 relative group"
               >
-                {item.label}
+                {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#0b6e99] transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </nav>
-        </div>
 
-        {/* Right: Request Demo + Mobile Menu */}
-        <div className="flex items-center justify-end gap-4">
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="lg:hidden">
-              <Button variant="outline" size="icon" aria-label="Open Menu">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle menu</span>
+          {/* Desktop CTA */}
+          <div className="hidden md:flex items-center gap-4">
+            <a
+              href="https://linktr.ee/gsyphysics"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-[#9b9a97] hover:text-[#37352f] transition-colors"
+            >
+              Join Us
+            </a>
+            <Button
+              size="sm"
+              className="bg-[#0b6e99] hover:bg-[#084c6b] text-white px-6 rounded-none"
+              asChild
+            >
+              <a
+                href="https://linktr.ee/gsyphysics"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get Started
+              </a>
+            </Button>
+          </div>
+
+          {/* Mobile Menu */}
+          <Sheet>
+            <SheetTrigger asChild className="md:hidden">
+              <Button variant="outline" size="icon" className="rounded-none border-[#f1f1ef]" aria-label="Open menu">
+                <Menu className="h-5 w-5 text-[#37352f]" />
               </Button>
             </SheetTrigger>
-            <SheetContent
-              side="right"
-              className="bg-[#1a1d21] text-white border-l border-[#2a2d31] dark:bg-[#1a1d21] dark:text-white dark:border-[#2a2d31]"
-            >
+            <SheetContent side="right" className="w-full sm:w-80 bg-white border-l border-[#f1f1ef]">
               <VisuallyHidden>
-                <SheetTitle>Mobile Navigation</SheetTitle>
+                <SheetTitle>Navigation Menu</SheetTitle>
               </VisuallyHidden>
-              <nav className="flex flex-col gap-4 mt-8" aria-label="Mobile Navigation">
-                {navItems.map((item, index) => (
+              <nav className="flex flex-col gap-6 mt-8" aria-label="Mobile Navigation">
+                {navLinks.map((link) => (
                   <Link
-                    key={index}
-                    href={item.href}
-                    className="text-lg font-medium transition-colors hover:text-primary"
-                    onClick={() => setIsOpen(false)}
+                    key={link.name}
+                    href={link.href}
+                    className="text-3xl font-serif text-[#37352f] hover:text-[#0b6e99] transition-colors"
                   >
-                    {item.label}
+                    {link.name}
                   </Link>
                 ))}
-                <div className="flex items-center gap-4 mt-4">
-                  <a
-                    href="https://linktr.ee/gsyphysics?utm_source=linktree_admin_share&fbclid=PAZXh0bgNhZW0CMTEAAae2gNGYbMIqNxd6X83eItXaftiCsuqzwc2-qWvHqvKO7PcG4jbwx5295eS-eg_aem_3EFH1AcVCNe19KC0M8c7uw"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-5 py-6 h-[60px] bg-[#1a1d21] hover:bg-[#2a2d31] text-white rounded-xl border-0 dark:bg-primary dark:hover:bg-primary/90 dark:shadow-[0_0_15px_rgba(36,101,237,0.5)] relative overflow-hidden group"
+                <div className="pt-6 border-t border-[#f1f1ef]">
+                  <Button
+                    className="w-full bg-[#0b6e99] hover:bg-[#084c6b] text-white h-12 rounded-none"
+                    asChild
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 dark:opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-x-[-100%] group-hover:translate-x-[100%]"></div>
-                    <Zap className="h-5 w-5 text-white relative z-10" />
-                    <div className="flex flex-col items-start relative z-10">
-                      <span className="text-sm font-medium">Join Us</span>
-                      <span className="text-xs text-gray-400 dark:text-gray-300 -mt-0.5">Applications open</span>
-                    </div>
-                  </a>
+                    <a
+                      href="https://linktr.ee/gsyphysics"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Join Us
+                    </a>
+                  </Button>
                 </div>
               </nav>
             </SheetContent>

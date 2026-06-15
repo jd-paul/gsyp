@@ -23,39 +23,33 @@ export default function FeatureCard({
   title,
   description,
   imageSrc,
-  icon,
-  accentColor = "rgba(36, 101, 237, 0.5)",
+  accentColor = "rgba(217, 115, 13, 0.4)",
 }: FeatureCardProps) {
   const style = {
-    // expose as CSS var so you can use it in multiple places
-    // without more inline styles
     "--accent": accentColor,
   } as CSSProperties
 
   return (
     <article
-      className="bg-white rounded-[20px] overflow-hidden shadow-md transition hover:shadow-lg"
+      className="group relative rounded-none overflow-hidden border border-[#37352f] bg-white"
       style={style}
     >
-      {/* Accent bar */}
-
-      {/* banner (optional) */}
       {imageSrc && (
-        <div className="relative h-44 w-full overflow-hidden group">
+        <div className="relative h-56 w-full overflow-hidden">
           <Image
             src={imageSrc}
             alt={title}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            className="object-cover"
             priority
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#37352f]/40 to-transparent pointer-events-none" />
         </div>
       )}
 
-      {/* body */}
-      <div className="p-6 space-y-2">
-        <h3 className="text-xl font-semibold text-neutral-900">{title}</h3>
-        <p className="text-sm text-neutral-700 leading-relaxed">{description}</p>
+      <div className="p-6 space-y-3">
+        <h3 className="text-xl font-semibold text-[#37352f] leading-snug group-hover:underline underline-offset-4 decoration-[#9b9a97]">{title}</h3>
+        <p className="text-sm text-[#9b9a97] leading-relaxed">{description}</p>
       </div>
     </article>
   )

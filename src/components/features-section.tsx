@@ -65,17 +65,17 @@ export default function FeaturesSection() {
   ]
 
   return (
-    <section className="py-20 bg-muted/50 dark:bg-muted/10" id="features" aria-labelledby="features-heading">
+    <section className="py-20 bg-[#f1f1ef]/50 dark:bg-[#f1f1ef]/10" id="features" aria-labelledby="features-heading">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground mb-2">
+            <div className="inline-block rounded-lg bg-[#0b6e99] px-3 py-1 text-sm text-white mb-2">
               Key Features
             </div>
-            <h2 id="features-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            <h2 id="features-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#37352f]">
               Enterprise-Grade AI Platform
             </h2>
-            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+            <p className="mx-auto max-w-[700px] text-[#9b9a97] md:text-xl">
               Designed specifically for organizations that demand security, customization, and control.
             </p>
           </div>

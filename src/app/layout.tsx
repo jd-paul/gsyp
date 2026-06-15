@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
 import {
-  Nunito,
-  Lora
+  Roboto,
+  Lora,
+  JetBrains_Mono
 } from "next/font/google"
 
 const lora = Lora({
@@ -12,9 +13,15 @@ const lora = Lora({
 
 import "./globals.css"
 
-const nunito = Nunito({
+const roboto = Roboto({
   subsets: ["latin"],
-  variable: "--font-nunito",
+  variable: "--font-roboto",
+  weight: ["400", "500", "700"],
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
   weight: ["400", "700"],
 })
 
@@ -30,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunito.variable} ${lora.variable} antialiased`}>
+      <body className={`${roboto.variable} ${lora.variable} ${jetbrainsMono.variable} antialiased`}>
         {children}
       </body>
     </html>

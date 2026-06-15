@@ -29,7 +29,7 @@ export function ReflectiveButton({ children, className, ...props }: ReflectiveBu
       {...props}
     >
       <div
-        className="absolute inset-[-1px] rounded-full pointer-events-none"
+        className="absolute inset-[-1px] rounded-none pointer-events-none"
         style={{
           opacity: isHovering ? 1 : 0,
           background: "transparent",
@@ -37,7 +37,7 @@ export function ReflectiveButton({ children, className, ...props }: ReflectiveBu
         }}
       >
         <div
-          className="absolute inset-0 rounded-full"
+          className="absolute inset-0 rounded-none"
           style={
             {
               background: "transparent",

@@ -37,7 +37,7 @@ export default function Testimonials() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Trusted by Leading Organizations
             </h2>
-            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+            <p className="mx-auto max-w-[700px] text-[#9b9a97] md:text-xl">
               See what our enterprise and government clients have to say about our AI platform.
             </p>
           </div>
@@ -47,16 +47,16 @@ export default function Testimonials() {
             <Card key={index} className="h-full flex flex-col">
               <CardContent className="pt-6 flex-grow">
                 <div className="mb-4 text-4xl">&quot;</div>
-                <p className="italic text-muted-foreground">{testimonial.quote}</p>
+                <p className="italic text-[#9b9a97]">{testimonial.quote}</p>
               </CardContent>
-              <CardFooter className="border-t pt-4">
+              <CardFooter className="border-t border-[#f1f1ef] pt-4">
                 <div className="flex items-center space-x-4">
                   <Avatar>
-                    <AvatarFallback>{testimonial.avatar}</AvatarFallback>
+                    <AvatarFallback className="bg-[#f1f1ef] text-[#37352f]">{testimonial.avatar}</AvatarFallback>
                   </Avatar>
                   <div>
-                    <p className="font-medium">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+                    <p className="font-medium text-[#37352f]">{testimonial.name}</p>
+                    <p className="text-sm text-[#9b9a97]">{testimonial.title}</p>
                   </div>
                 </div>
               </CardFooter>

@@ -1,31 +1,16 @@
 export default function StructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Enterprise AI Platform",
-    applicationCategory: "BusinessApplication",
-    operatingSystem: "Web",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split("T")[0],
-    },
+    "@type": "EducationalOrganization",
+    name: "Global Society of Young Physicists",
+    alternateName: "GSYP",
+    url: "https://gsyp.org",
+    logo: "https://gsyp.org/logo.png",
     description:
-      "Enterprise-grade AI platform with LLM conversations, customizable agents, secure knowledge base, and MCP server support.",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      ratingCount: "127",
-    },
-    featureList: [
-      "Advanced LLM Conversations",
-      "Customizable Agents",
-      "Enterprise Knowledge Base",
-      "Prompt Templates",
-      "MCP Server Support",
-      "Enterprise Security",
+      "A student-led organisation that helps high-schoolers dive into university-level physics research through mentorship, publications, and community programmes.",
+    sameAs: [
+      "https://linkedin.com/company/gsyphysics",
+      "https://www.instagram.com/gsyphysics/",
     ],
   }
 
