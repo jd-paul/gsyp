@@ -102,6 +102,7 @@ export default function About() {
                 {[
                   {
                     name: "Arya",
+                    title: "Chief Exec - Arya",
                     image: "/image/Arya.jpeg",
                     tooltip: (
                       <>
@@ -117,6 +118,7 @@ export default function About() {
                   },
                   {
                     name: "Toby",
+                    title: "Mentor - Toby",
                     image: "/image/Toby.jpeg",
                     tooltip: (
                       <>
@@ -132,6 +134,7 @@ export default function About() {
                   },
                   {
                     name: "Kajol",
+                    title: "Mentor - Kajol",
                     image: "/image/Kajol.jpeg",
                     tooltip: (
                       <>
@@ -145,6 +148,7 @@ export default function About() {
                   },
                   {
                     name: "Nikita",
+                    title: "Mentor - Nikita",
                     image: "/image/Nikita.jpeg",
                     tooltip: (
                       <>
@@ -159,7 +163,7 @@ export default function About() {
                 ].map((member) => (
                   <FeatureCard
                     key={member.name}
-                    title={`Mentor - ${member.name}`}
+                    title={member.title}
                     imageSrc={member.image}
                     tooltip={member.tooltip}
                   />
