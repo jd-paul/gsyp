@@ -140,6 +140,8 @@ export default function About() {
                       <>
                         <strong>Kajol Mistry</strong>
                         <br />
+                        Senior Research Mentor
+                        <br />
                         Graduated from MSci Physics
                         <br />
                         King&apos;s College London
@@ -153,6 +155,8 @@ export default function About() {
                     tooltip: (
                       <>
                         <strong>Nikita Azevedo</strong>
+                        <br />
+                        Senior Research Mentor
                         <br />
                         MSc Candidate in Quantum Algorithms on Quantum
                         <br />
