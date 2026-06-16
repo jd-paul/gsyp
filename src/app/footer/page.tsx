@@ -2,7 +2,7 @@ import React from "react"
 
 const Footer = () => {
   return (
-    <footer className="relative border-t border-[#f1f1ef] bg-white" id="contact">
+    <footer className="relative border-t border-[#f1f1ef] bg-white">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="py-16 lg:py-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-2 space-y-4">
@@ -26,13 +26,8 @@ const Footer = () => {
             <h3 className="text-sm font-mono uppercase tracking-widest text-[#37352f] mb-6">Contact</h3>
             <ul className="space-y-3 text-sm text-[#9b9a97]">
               <li>
-                <a href="mailto:contact@gsyp.org" className="hover:text-[#d9730d] transition-colors">
-                  contact@gsyp.org
-                </a>
-              </li>
-              <li>
-                <a href="mailto:info@gsyp.org" className="hover:text-[#d9730d] transition-colors">
-                  info@gsyp.org
+                <a href="mailto:Arya.gsyp@gmail.com" className="hover:text-[#d9730d] transition-colors">
+                  Arya.gsyp@gmail.com
                 </a>
               </li>
             </ul>

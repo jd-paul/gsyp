@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 
 const STUDENT_FORM =
   "https://docs.google.com/forms/d/e/1FAIpQLSfq20HjBviEnL6eh-3ftrnoQxuLC6vm-JrI_frYKdwrQgh-Rw/viewform";
@@ -90,6 +90,23 @@ export function CtaSection() {
                       className="inline-flex items-center gap-2"
                     >
                       Apply as Mentor
+                    </a>
+                  </Button>
+                </div>
+
+                <div className="mt-4">
+                  <Button
+                    size="lg"
+                    asChild
+                    variant="ghost"
+                    className="h-14 px-0 text-base text-[#0b6e99] hover:text-[#084c6b] hover:bg-transparent"
+                  >
+                    <a
+                      href="mailto:Arya.gsyp@gmail.com"
+                      className="inline-flex items-center gap-2"
+                    >
+                      <Mail className="w-4 h-4" />
+                      Email us
                     </a>
                   </Button>
                 </div>
