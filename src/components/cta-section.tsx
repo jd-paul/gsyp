@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Mail, Squirrel, User } from "lucide-react";
 
 const STUDENT_FORM =
   "https://docs.google.com/forms/d/e/1FAIpQLSfq20HjBviEnL6eh-3ftrnoQxuLC6vm-JrI_frYKdwrQgh-Rw/viewform";
@@ -60,11 +60,11 @@ export function CtaSection() {
                   mentor and begin shaping the future of physics.
                 </p>
 
-                <div className="flex flex-col sm:flex-row items-start gap-4">
+                <div className="flex flex-col sm:flex-row items-start gap-4 flex-wrap">
                   <Button
                     size="lg"
                     asChild
-                    className="bg-[#d9730d] hover:bg-[#c2690b] text-white px-8 h-14 text-base rounded-none group"
+                    className="bg-[#d9730d] hover:bg-[#c2690b] text-white px-6 h-14 text-base rounded-none group"
                   >
                     <a
                       href={STUDENT_FORM}
@@ -72,6 +72,7 @@ export function CtaSection() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2"
                     >
+                      <User className="w-4 h-4" />
                       Apply as Student
                       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </a>
@@ -80,8 +81,7 @@ export function CtaSection() {
                   <Button
                     size="lg"
                     asChild
-                    variant="outline"
-                    className="h-14 px-8 text-base rounded-none border-[#37352f] hover:bg-[#f1f1ef] text-[#37352f]"
+                    className="bg-[#d9730d] hover:bg-[#c2690b] text-white px-6 h-14 text-base rounded-none group"
                   >
                     <a
                       href={MENTOR_FORM}
@@ -89,17 +89,16 @@ export function CtaSection() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2"
                     >
+                      <Squirrel className="w-4 h-4" />
                       Apply as Mentor
                     </a>
                   </Button>
-                </div>
 
-                <div className="mt-4">
                   <Button
                     size="lg"
                     asChild
-                    variant="ghost"
-                    className="h-14 px-0 text-base text-[#0b6e99] hover:text-[#084c6b] hover:bg-transparent"
+                    variant="outline"
+                    className="h-14 px-6 text-base rounded-none border-[#37352f] bg-transparent hover:bg-[#f1f1ef] text-[#37352f]"
                   >
                     <a
                       href="mailto:Arya.gsyp@gmail.com"

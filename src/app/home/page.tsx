@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { BookOpenCheck, Squirrel, User } from "lucide-react";
+import { ArrowRight, Monitor, Squirrel, User } from "lucide-react";
 import StructuredData from "@/components/structured-data";
 
 const verbs = ["create", "discover", "research", "publish"];
@@ -43,7 +43,7 @@ export default function Home() {
       <div className="flex flex-col">
         <section
           id="home"
-          className="relative flex flex-col justify-center overflow-hidden bg-white"
+          className="relative flex flex-col justify-center overflow-hidden bg-white border-b border-[#f1f1ef]"
           style={{ minHeight: "calc(100vh - 64px)" }}
         >
           {/* Subtle editorial grid lines */}
@@ -189,11 +189,11 @@ export default function Home() {
                 minds.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-start gap-4">
+              <div className="flex flex-col sm:flex-row items-start gap-4 flex-wrap">
                 <Button
                   size="lg"
                   asChild
-                  className="bg-[#d9730d] hover:bg-[#c2690b] text-white px-8 h-14 text-base rounded-none group"
+                  className="bg-[#d9730d] hover:bg-[#c2690b] text-white px-6 h-14 text-base rounded-none group"
                 >
                   <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLSfq20HjBviEnL6eh-3ftrnoQxuLC6vm-JrI_frYKdwrQgh-Rw/viewform"
@@ -203,13 +203,14 @@ export default function Home() {
                   >
                     <User className="w-4 h-4" />
                     Apply as Student
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </a>
                 </Button>
 
                 <Button
                   size="lg"
                   asChild
-                  className="bg-[#d9730d] hover:bg-[#c2690b] text-white px-8 h-14 text-base rounded-none group"
+                  className="bg-[#d9730d] hover:bg-[#c2690b] text-white px-6 h-14 text-base rounded-none group"
                 >
                   <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLSffZqSmqJIBKOTXKG_hdv5LIP3ef9nqhOx6nJ5r9YySv79QFA/viewform"
@@ -226,10 +227,10 @@ export default function Home() {
                   size="lg"
                   asChild
                   variant="outline"
-                  className="h-14 px-8 text-base rounded-none border-[#37352f] bg-transparent hover:bg-[#f1f1ef] text-[#37352f]"
+                  className="h-14 px-6 text-base rounded-none border-[#37352f] bg-transparent hover:bg-[#f1f1ef] text-[#37352f]"
                 >
                   <a href="#program" className="inline-flex items-center gap-2">
-                    <BookOpenCheck className="w-4 h-4" />
+                    <Monitor className="w-4 h-4" />
                     Learn More
                   </a>
                 </Button>

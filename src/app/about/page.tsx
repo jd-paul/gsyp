@@ -2,6 +2,7 @@
 
 import { ArrowUpRight } from "lucide-react";
 import { NewsGrid } from "@/components/news-grid";
+import FeatureCard from "@/components/feature-card";
 
 export default function About() {
   const ctaLinks = [
@@ -84,7 +85,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="relative w-full md:w-1/2 min-h-[320px] md:min-h-full bg-[#0b6e99] overflow-hidden">
+          <div className="relative w-full md:w-1/2 min-h-[320px] md:min-h-full bg-[#0b6e99] flex items-center justify-center p-8 lg:p-12">
             <div
               className="absolute inset-0 opacity-[0.12]"
               style={{
@@ -95,6 +96,76 @@ export default function About() {
             />
 
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+
+            <div className="relative z-30 w-full max-w-[560px]">
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  {
+                    name: "Arya",
+                    image: "/image/Arya.jpeg",
+                    tooltip: (
+                      <>
+                        <strong>Arya Lal Gonullu</strong>
+                        <br />
+                        Chief Exec. of GSYP
+                        <br />
+                        Graduated from Theoretical Physics
+                        <br />
+                        King&apos;s College London
+                      </>
+                    ),
+                  },
+                  {
+                    name: "Toby",
+                    image: "/image/Toby.jpeg",
+                    tooltip: (
+                      <>
+                        <strong>Toby Bhanji</strong>
+                        <br />
+                        Senior Research Mentor
+                        <br />
+                        4th Year Physics
+                        <br />
+                        King&apos;s College London
+                      </>
+                    ),
+                  },
+                  {
+                    name: "Kajol",
+                    image: "/image/Kajol.jpeg",
+                    tooltip: (
+                      <>
+                        <strong>Kajol Mistry</strong>
+                        <br />
+                        Graduated from MSci Physics
+                        <br />
+                        King&apos;s College London
+                      </>
+                    ),
+                  },
+                  {
+                    name: "Nikita",
+                    image: "/image/Nikita.jpeg",
+                    tooltip: (
+                      <>
+                        <strong>Nikita Azevedo</strong>
+                        <br />
+                        MSc Candidate in Quantum Algorithms on Quantum
+                        <br />
+                        & Photonic Computers at the University of the Witwatersrand
+                      </>
+                    ),
+                  },
+                ].map((member) => (
+                  <FeatureCard
+                    key={member.name}
+                    title={`Mentor - ${member.name}`}
+                    imageSrc={member.image}
+                    tooltip={member.tooltip}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
