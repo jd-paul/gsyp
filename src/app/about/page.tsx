@@ -278,18 +278,6 @@ export default function About() {
                     href: "https://drive.google.com/file/d/1TpDt1oiccsfUur13e3AvkjqXdaaInAR2/view?usp=sharing",
                   },
                 ]}
-                links={[
-                  {
-                    title: "Class list 2025",
-                    description: "",
-                    href: "https://drive.google.com/file/d/19as2YOwavprLoCHJIoQz7zyJxmJPnSvy/view?usp=sharing",
-                  },
-                  {
-                    title: "Class list 2024",
-                    description: "",
-                    href: "https://drive.google.com/file/d/1PxGx8JF3hc_C2LSFHDRMXPlc2fAubWtw/view?usp=sharing",
-                  },
-                ]}
               />
             </div>
           </div>
