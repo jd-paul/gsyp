@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "next/link"
 
 const Footer = () => {
   return (
@@ -62,6 +63,9 @@ const Footer = () => {
 
         <div className="py-8 border-t border-[#f1f1ef] flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#9b9a97]">
           <p>© {new Date().getFullYear()} Global Society of Young Physicists</p>
+          <Link href="/privacy" className="hover:text-[#d9730d] transition-colors">
+            Privacy Notice
+          </Link>
         </div>
       </div>
     </footer>

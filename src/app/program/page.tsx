@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image"
 import FeatureCard from "@/components/feature-card"
 
 const Program = () => {
@@ -19,31 +20,38 @@ const Program = () => {
           </h2>
 
           <p className="text-lg text-[#9b9a97] max-w-[700px]">
-            Here are some pictures of a previous research mentorship cycle.
+            A lecture slide from one of our research mentorship lectures.
           </p>
+        </div>
+
+        <div className="relative w-full max-w-4xl mb-12 border border-[#37352f] bg-white">
+          <Image
+            src="/image/lecture-slide.png"
+            alt="Lecture slide on quantum teleportation from a GSYP research mentorship lecture"
+            width={2130}
+            height={1256}
+            className="w-full h-auto"
+            priority
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
             {
-              imageSrc: "/image/meeting-1.png",
               title: "Deep dives into equations",
               description:
                 "We dive into equations that help you transition to university maths, such as Euler's identity, Bayes' theorem, and fundamental calculus limits.",
             },
             {
-              imageSrc: "/image/meeting-2.png",
               title: "A big community",
               description: "Learn together with our community of pupils and lecturers.",
             },
             {
-              imageSrc: "/image/meeting-3.png",
               title: "Accessibility and convenience",
               description:
                 "Everything is online. In-person staff meetings are occassionally done across Europe!",
             },
             {
-              imageSrc: "/image/meeting-4.png",
               title: "Recorded lectures",
               description: "We record and share our lectures for your use.",
             },
@@ -52,7 +60,6 @@ const Program = () => {
               key={i}
               title={feature.title}
               description={feature.description}
-              imageSrc={feature.imageSrc}
             />
           ))}
         </div>
