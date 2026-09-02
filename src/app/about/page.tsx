@@ -27,12 +27,8 @@ export default function About() {
       label: "Outreach Manager Form",
     },
     {
-      href: "https://docs.google.com/forms/d/e/1FAIpQLSffZqSmqJIBKOTXKG_hdv5LIP3ef9nqhOx6nJ5r9YySv79QFA/viewform?usp=header",
-      label: "New Mentor Form",
-    },
-    {
-      href: "https://docs.google.com/forms/d/e/1FAIpQLScxgmUZ-wRHCJcVzJF9wuw_5UAgMjPZftJd-SteyRtmYRvQ-Q/viewform?usp=header",
-      label: "Returning Mentor Form",
+      href: "https://forms.gle/EgjNFHRNdMtLEiVGA",
+      label: "RMP 2027 Mentor Application",
     },
     {
       href: "https://docs.google.com/forms/d/e/1FAIpQLSeB0I5vwjzYL9_A1kZARpwXViuMWYBBi86Vp38WnmRINq9-gQ/viewform",

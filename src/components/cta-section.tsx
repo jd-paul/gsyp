@@ -6,8 +6,7 @@ import { ArrowRight, Mail, Squirrel, User } from "lucide-react";
 
 const STUDENT_FORM =
   "https://docs.google.com/forms/d/e/1FAIpQLSfq20HjBviEnL6eh-3ftrnoQxuLC6vm-JrI_frYKdwrQgh-Rw/viewform";
-const MENTOR_FORM =
-  "https://docs.google.com/forms/d/e/1FAIpQLSffZqSmqJIBKOTXKG_hdv5LIP3ef9nqhOx6nJ5r9YySv79QFA/viewform";
+const MENTOR_FORM = "https://forms.gle/EgjNFHRNdMtLEiVGA";
 
 export function CtaSection() {
   const [isVisible, setIsVisible] = useState(false);

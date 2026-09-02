@@ -24,7 +24,7 @@ const Program = () => {
           </p>
         </div>
 
-        <div className="relative w-full max-w-4xl mb-12 border border-[#37352f] bg-white">
+        <div className="relative w-full mb-12 border border-[#37352f] bg-white">
           <Image
             src="/image/lecture-slide.png"
             alt="Lecture slide on quantum teleportation from a GSYP research mentorship lecture"

@@ -5,10 +5,12 @@ import About from "@/app/about/page"
 import Program from "@/app/program/page"
 import { CtaSection } from "@/components/cta-section"
 import Footer from "@/app/footer/page"
+import { AnnouncementBanner } from "@/components/announcement-banner"
 
 export default function HomePage() {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
+      <AnnouncementBanner />
       <Navbar />
       <Home />
       <About />

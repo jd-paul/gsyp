@@ -213,7 +213,7 @@ export default function Home() {
                   className="bg-[#d9730d] hover:bg-[#c2690b] text-white px-6 h-14 text-base rounded-none group"
                 >
                   <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSffZqSmqJIBKOTXKG_hdv5LIP3ef9nqhOx6nJ5r9YySv79QFA/viewform"
+                    href="https://forms.gle/EgjNFHRNdMtLEiVGA"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2"
