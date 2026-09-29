@@ -51,7 +51,7 @@ export function NewsGrid({ items, links }: NewsGridProps) {
 
         {/* Supporting cards */}
         {rest.map((item, index) => {
-          const isLast = index === rest.length - 1
+          const fillsRow = index === rest.length - 1 && rest.length % 2 === 1
           return (
             <a
               key={index}
@@ -59,7 +59,7 @@ export function NewsGrid({ items, links }: NewsGridProps) {
               target="_blank"
               rel="noopener noreferrer"
               className={`group flex flex-col h-full bg-white border border-[#37352f] overflow-hidden ${
-                isLast ? "lg:col-span-2" : ""
+                fillsRow ? "lg:col-span-2" : ""
               }`}
             >
               {item.image && (

@@ -246,6 +246,13 @@ export default function About() {
               <NewsGrid
                 items={[
                   {
+                    image: "/image/issue-5.png",
+                    title: "Read our September 2026 Issue!",
+                    description:
+                      "Presents the 2026 research mentorship programme (RMP) papers on extra dimensions, black holes, and fly-by-wire systems.",
+                    href: "https://drive.google.com/file/d/1erFRaBApVuudhlwE6dOe0XahglXUg5sh/view?usp=sharing",
+                  },
+                  {
                     image: "/image/issue-4.png",
                     title: "Read our August 2025 Issue!",
                     description:
