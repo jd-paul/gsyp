@@ -250,35 +250,35 @@ export default function About() {
                     title: "Read our September 2026 Issue!",
                     description:
                       "Presents the 2026 research mentorship programme (RMP) papers on extra dimensions, black holes, and fly-by-wire systems.",
-                    href: "https://drive.google.com/file/d/1erFRaBApVuudhlwE6dOe0XahglXUg5sh/view?usp=sharing",
+                    href: "/issues/issue-5.pdf",
                   },
                   {
                     image: "/image/issue-4.png",
                     title: "Read our August 2025 Issue!",
                     description:
                       "Presents the 2025 research mentorship programme (RMP) papers on advanced physics topics.",
-                    href: "https://drive.google.com/file/d/1kTuvAXBbbspFzkv75FRiYtDcsypdEVlD/view?usp=sharing",
+                    href: "/issues/issue-4.pdf",
                   },
                   {
                     image: "/image/issue-3.png",
                     title: "Read our April 2025 Issue!",
                     description:
                       "Includes global student contributions on quantum ideas, astrophysics, and cross-field themes.",
-                    href: "https://drive.google.com/file/d/1OpUB-QzRZHJPlvsuZC9vMSUTxzbjVArm/view?usp=sharing",
+                    href: "/issues/issue-3.pdf",
                   },
                   {
                     image: "/image/issue-2.png",
                     title: "Read our December 2024 Issue!",
                     description:
                       "Covers black holes, space missions, and creative approaches to experiments.",
-                    href: "https://drive.google.com/file/d/1m4EtybazHj8aYMk2huTrJ0oq7XikgFd6/view?usp=sharing",
+                    href: "/issues/issue-2.pdf",
                   },
                   {
                     image: "/image/issue-1.png",
                     title: "Read our August 2024 Issue!",
                     description:
                       "The first issue, featuring student reports on topics like planets, particles, and space science.",
-                    href: "https://drive.google.com/file/d/1TpDt1oiccsfUur13e3AvkjqXdaaInAR2/view?usp=sharing",
+                    href: "/issues/issue-1.pdf",
                   },
                 ]}
               />
