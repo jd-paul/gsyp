@@ -1,28 +1,24 @@
 import type { Metadata } from "next"
-import {
-  Roboto,
-  Lora,
-  JetBrains_Mono
-} from "next/font/google"
+import localFont from "next/font/local"
 
-const lora = Lora({
-  subsets: ["latin"],
+const lora = localFont({
+  src: [{ path: "../fonts/lora-latin.woff2", weight: "400 700", style: "normal" }],
   variable: "--font-lora",
-  weight: ["400", "700"], // adjust as needed
+  display: "swap",
 })
 
 import "./globals.css"
 
-const roboto = Roboto({
-  subsets: ["latin"],
+const roboto = localFont({
+  src: [{ path: "../fonts/roboto-latin.woff2", weight: "400 700", style: "normal" }],
   variable: "--font-roboto",
-  weight: ["400", "500", "700"],
+  display: "swap",
 })
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
+const jetbrainsMono = localFont({
+  src: [{ path: "../fonts/jetbrains-mono-latin.woff2", weight: "400 700", style: "normal" }],
   variable: "--font-jetbrains",
-  weight: ["400", "700"],
+  display: "swap",
 })
 
 export const metadata: Metadata = {
