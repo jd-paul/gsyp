@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -12,13 +13,16 @@ import { Menu } from "lucide-react"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "Community", href: "#community" },
-  { name: "Program", href: "#program" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/#home" },
+  { name: "Community", href: "/#community" },
+  { name: "Program", href: "/#program" },
+  { name: "Team", href: "/staff-mentors" },
+  { name: "Contact", href: "/#contact" },
 ]
 
 export default function Navbar() {
+  const pathname = usePathname()
+
   return (
     <header className="w-full border-b border-[#f1f1ef] bg-white">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
@@ -41,6 +45,11 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
+                aria-current={
+                  link.href === "/staff-mentors" && pathname === "/staff-mentors"
+                    ? "page"
+                    : undefined
+                }
                 className="text-sm text-[#9b9a97] hover:text-[#37352f] transition-colors duration-300 relative group"
               >
                 {link.name}
@@ -90,6 +99,12 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
+                    aria-current={
+                      link.href === "/staff-mentors" &&
+                      pathname === "/staff-mentors"
+                        ? "page"
+                        : undefined
+                    }
                     className="text-3xl font-serif text-[#37352f] hover:text-[#0b6e99] transition-colors"
                   >
                     {link.name}
