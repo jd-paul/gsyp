@@ -39,7 +39,7 @@ export default function PrivacyNotice() {
           Privacy Notice
         </h1>
         <p className="text-sm text-[#9b9a97] font-mono mb-12">
-          Last updated: July 2026
+          Last updated: September 2026
         </p>
 
         <section className="mb-10">
@@ -61,7 +61,9 @@ export default function PrivacyNotice() {
             What information we collect
           </h2>
           <p className="leading-relaxed mb-3">
-            When you apply to or participate in RMP 2026, we may collect:
+            When you apply to or participate in Research Mentorship Program or a
+            piece to be featured in our science magazine titled “The Starry
+            Messenger”, we may collect:
           </p>
           <ul className="list-disc pl-6 space-y-1 mb-3">
             <li>Your name.</li>

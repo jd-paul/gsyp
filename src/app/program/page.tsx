@@ -20,20 +20,37 @@ const Program = () => {
           </h2>
 
           <p className="text-lg text-[#9b9a97] max-w-[700px]">
-            A lecture slide from one of our research mentorship lectures.
+            Inside our online research mentorship lectures: live teaching,
+            handwritten working, and discussion.
           </p>
         </div>
 
-        <div className="relative w-full mb-12 border border-[#37352f] bg-white">
+        <div className="relative w-full mb-8 border border-[#37352f] bg-white">
           <Image
-            src="/image/lecture-slide.png"
-            alt="Lecture slide on quantum teleportation from a GSYP research mentorship lecture"
-            width={2130}
-            height={1256}
+            src="/image/cp-violation-lecture.png"
+            alt="A GSYP lecture on CP violation with handwritten equations and mentors participating online"
+            width={2879}
+            height={1446}
             className="w-full h-auto"
             priority
           />
         </div>
+
+        <figure className="grid grid-cols-1 lg:grid-cols-[minmax(0,3fr)_minmax(220px,1fr)] gap-6 items-end mb-12">
+          <div className="border border-[#37352f] bg-white">
+            <Image
+              src="/image/many-worlds-lecture.png"
+              alt="A GSYP online lecture exploring the many-worlds interpretation of quantum mechanics"
+              width={2880}
+              height={1800}
+              className="w-full h-auto"
+            />
+          </div>
+          <figcaption className="text-sm leading-relaxed text-[#9b9a97] lg:pb-1">
+            Exploring the many-worlds interpretation through live teaching and
+            collaborative discussion.
+          </figcaption>
+        </figure>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[

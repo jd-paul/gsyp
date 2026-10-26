@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { NewsGrid } from "@/components/news-grid";
 import FeatureCard from "@/components/feature-card";
@@ -207,9 +208,9 @@ export default function About() {
                 </p>
 
                 <p className="text-lg text-[#9b9a97] leading-relaxed">
-                  We offer a the research mentorship program where we pair
-                  highschool students with university mentors for a remote
-                  research experience in physics.
+                  We offer a research mentorship programme where we pair high
+                  school students (Year 10–13 or 9th–12th graders) with
+                  university mentors for a remote research experience in physics.
                 </p>
               </div>
 
@@ -238,10 +239,27 @@ export default function About() {
               </div>
             </div>
 
+            <figure>
+              <div className="border border-[#37352f] bg-white">
+                <Image
+                  src="/image/mentorship-community.png"
+                  alt="Students and university mentors taking part in an online GSYP research mentorship session"
+                  width={2880}
+                  height={1800}
+                  className="w-full h-auto"
+                  priority
+                />
+              </div>
+              <figcaption className="mt-3 text-sm text-[#9b9a97]">
+                Students and university mentors collaborating during an online
+                Research Mentorship Programme session.
+              </figcaption>
+            </figure>
+
             {/* Issues grid */}
             <div>
               <p className="text-sm font-mono uppercase tracking-widest text-[#9b9a97] mb-4">
-                Starry Messenger Issues
+                The Starry Messenger / Issues
               </p>
               <NewsGrid
                 items={[
