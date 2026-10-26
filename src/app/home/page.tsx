@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Monitor, Squirrel, User } from "lucide-react";
+import { ArrowRight, Monitor, User } from "lucide-react";
 import StructuredData from "@/components/structured-data";
+import { MENTOR_APPLICATION_URL, STUDENT_APPLICATION_URL } from "@/lib/site-links";
 
 const verbs = ["create", "discover", "research", "publish"];
 
@@ -196,7 +197,7 @@ export default function Home() {
                   className="bg-[#d9730d] hover:bg-[#c2690b] text-white px-6 h-14 text-base rounded-none group"
                 >
                   <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSfq20HjBviEnL6eh-3ftrnoQxuLC6vm-JrI_frYKdwrQgh-Rw/viewform"
+                    href={STUDENT_APPLICATION_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2"
@@ -213,12 +214,12 @@ export default function Home() {
                   className="bg-[#d9730d] hover:bg-[#c2690b] text-white px-6 h-14 text-base rounded-none group"
                 >
                   <a
-                    href="https://forms.gle/EgjNFHRNdMtLEiVGA"
+                    href={MENTOR_APPLICATION_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2"
                   >
-                    <Squirrel className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                     Apply as Mentor
                   </a>
                 </Button>

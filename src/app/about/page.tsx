@@ -1,19 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { NewsGrid } from "@/components/news-grid";
 import FeatureCard from "@/components/feature-card";
+import { STUDENT_APPLICATION_URL } from "@/lib/site-links";
 
 export default function About() {
   const ctaLinks = [
     {
-      href: "https://forms.gle/iYRir2qz3n9hZQLMA",
-      label: "RMP 2026 Student Applications",
-    },
-    {
-      href: "https://forms.gle/vaPwX6zpJNWMZFyK9",
-      label: "RMP 2025 Early Student Application",
+      href: STUDENT_APPLICATION_URL,
+      label: "RMP 2027 Student Application",
     },
     {
       href: "https://docs.google.com/forms/d/e/1FAIpQLSeQ9giQL7a9kHb_y9LRsGNqLglrrvtNAqCnfxVTr4LghIxZPg/viewform",
@@ -212,6 +210,13 @@ export default function About() {
                   school students (Year 10–13 or 9th–12th graders) with
                   university mentors for a remote research experience in physics.
                 </p>
+                <Link
+                  href="/staff-mentors"
+                  className="group mt-5 inline-flex items-center gap-2 text-[#37352f] underline underline-offset-4 transition-colors hover:text-[#d9730d]"
+                >
+                  Meet our staff and mentors
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
               </div>
 
               <div>

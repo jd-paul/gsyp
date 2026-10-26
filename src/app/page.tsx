@@ -3,9 +3,9 @@ import Navbar from "@/components/navbar"
 import Home from "@/app/home/page"
 import About from "@/app/about/page"
 import Program from "@/app/program/page"
-import { CtaSection } from "@/components/cta-section"
 import Footer from "@/app/footer/page"
 import { AnnouncementBanner } from "@/components/announcement-banner"
+import ContactSection from "@/components/contact-section"
 
 export default function HomePage() {
   return (
@@ -15,7 +15,7 @@ export default function HomePage() {
       <Home />
       <About />
       <Program />
-      <CtaSection />
+      <ContactSection />
       <Footer />
     </main>
   )
